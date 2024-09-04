@@ -6,12 +6,13 @@ import androidx.lifecycle.ViewModel;
 
 public class CopoViewModel extends ViewModel {
     private MutableLiveData<Integer> imagemCopo;
-    private final int volumeMl;
-    private boolean bebido;
 
-    public CopoViewModel(int volumeMl) {
-        this.volumeMl = volumeMl;
+    private AguaDiariaViewModel aguadiaria;
+    private Copo copoobje;
+
+    public CopoViewModel(Copo copoobje) {
         this.bebido = false;
+        this.copoobje = copoobje;
         imagemCopo = new MutableLiveData<>(R.drawable.copo_cheio);
     }
 
@@ -20,7 +21,7 @@ public class CopoViewModel extends ViewModel {
     }
 
     public String getVolume() {
-        return volumeMl + " ml";
+        return copoobje.getVolumeMl() + " ml";
     }
 
     public boolean isBebido() {

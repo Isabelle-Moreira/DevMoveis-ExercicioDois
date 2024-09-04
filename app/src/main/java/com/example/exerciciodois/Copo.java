@@ -16,12 +16,4 @@ public class Copo {
     public int getVolumeMl() {
         return volumeMl;
     }
-
-    public void beber() {
-        this.cheio = false;
-    }
-
-    public void desfazer() {
-        this.cheio = true;
-    }
 }

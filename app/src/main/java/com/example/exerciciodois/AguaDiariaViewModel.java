@@ -50,7 +50,7 @@ public class AguaDiariaViewModel extends ViewModel {
     private void criarCoposViewModel() {
         coposViewModel = new ArrayList<>();
         for (Copo copo : aguaDiaria.getCopos()) {
-            coposViewModel.add(new CopoViewModel(copo.getVolumeMl()));
+            coposViewModel.add(new CopoViewModel(copo));
         }
         if (adapter != null) {
             adapter.setCopos(coposViewModel);
@@ -63,7 +63,7 @@ public class AguaDiariaViewModel extends ViewModel {
 
     // ... getters para LiveData
 
-    public LiveData<String> getPeso() {
+    public MutableLiveData<String> getPeso() {
         return peso;
     }
 

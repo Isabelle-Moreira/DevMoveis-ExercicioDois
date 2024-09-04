@@ -33,19 +33,19 @@
             android:id="@+id/textViewVolume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{'Meta: ' + viewModel.volume + 'L'}" />
+            android:text="@{viewModel.volume}" />
 
         <TextView
             android:id="@+id/textViewBebido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{'Bebido: ' + viewModel.bebidoAgora + 'L'}" />
+            android:text="@{viewModel.bebidoAgora}" />
 
         <TextView
             android:id="@+id/textViewFaltando"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{'Faltando: ' + viewModel.faltando + 'L'}" />
+            android:text="@{viewModel.faltando}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCopos"
