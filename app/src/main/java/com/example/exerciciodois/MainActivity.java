@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import com.example.exerciciodois.databinding.ActivityMainBinding;
-
+import androidx.databinding.BindingAdapter;
+import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -20,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
         aguaDiariaViewModel = new ViewModelProvider(this).get(AguaDiariaViewModel.class);
         binding.setViewModel(aguaDiariaViewModel);
         binding.setLifecycleOwner(this);
+    }
+    @BindingAdapter("android:src")
+    public static void setImageResource(ImageView imageView, int resourceId) {
+        imageView.setImageResource(resourceId);
     }
 }
