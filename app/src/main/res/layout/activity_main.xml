@@ -30,16 +30,36 @@
             android:onClick="@{() -> viewModel.calcular()}" />
 
         <TextView
+            android:id="@+id/textViewMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meta:" />
+
+
+        <TextView
             android:id="@+id/textViewVolume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.volume}" />
+
+
+        <TextView
+            android:id="@+id/textViewjabebido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebido:" />
 
         <TextView
             android:id="@+id/textViewBebido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.bebidoAgora}" />
+
+        <TextView
+            android:id="@+id/textViewaindaFaltando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faltando:" />
 
         <TextView
             android:id="@+id/textViewFaltando"

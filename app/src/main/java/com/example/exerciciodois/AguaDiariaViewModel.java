@@ -32,19 +32,18 @@ public class AguaDiariaViewModel extends ViewModel {
             atualizarDados();
             criarCoposViewModel();
         } catch (NumberFormatException e) {
-            // Lidar com o caso de peso inválido (opcional)
             volume.setValue("Peso inválido");
         }
     }
 
     private void atualizarDados() {
-        float metaLitros = aguaDiaria.getCopos().size() * (200f / 1000f);
-        float litrosBebidos = aguaDiaria.litrosBebidosAteAgora();
-        float litrosFaltando = metaLitros - litrosBebidos;
+        float metaml = aguaDiaria.totalMl();
+        float mlBebidos = aguaDiaria.mlBebidosAteAgora();
+        float mlFaltando = metaml - mlBebidos;
 
-        volume.setValue(String.format("%.1f", metaLitros));
-        bebidoAgora.setValue(String.format("%.1f", litrosBebidos));
-        faltando.setValue(String.format("%.1f", litrosFaltando));
+        volume.setValue(String.format("%.1f ml", metaml));
+        bebidoAgora.setValue(String.format("%.1f ml", mlBebidos));
+        faltando.setValue(String.format("%.1f ml", mlFaltando));
     }
 
     private void criarCoposViewModel() {

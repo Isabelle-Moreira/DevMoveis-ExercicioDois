@@ -15,8 +15,7 @@
             android:id="@+id/imageViewCopo"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@{copoViewModel.imagemCopo}"
-            android:onClick="@{() ->copoViewModel.alternarEstadoCopo()}"/>
+            android:src="@{copoViewModel.imagemCopo}" />
 
         <TextView
             android:id="@+id/textViewVolumeCopo"

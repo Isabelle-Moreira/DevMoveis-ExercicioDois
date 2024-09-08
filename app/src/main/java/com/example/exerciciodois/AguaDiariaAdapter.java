@@ -37,6 +37,7 @@ public class AguaDiariaAdapter extends RecyclerView.Adapter<CopoViewHolder> {
                 } else {
                     aguaDiariaViewModel.desfazerCopo(position);
                 }
+                notifyItemChanged(position);
             });
         }
     }

@@ -25,13 +25,21 @@ public class AguaDiaria {
         return copos;
     }
 
-    public float litrosBebidosAteAgora() {
-        int coposBebidos = 0;
+    public float mlBebidosAteAgora() {
+        float mlBebidos = 0;
         for (Copo copo : copos) {
             if (!copo.isCheio()) {
-                coposBebidos++;
+                mlBebidos += copo.getVolumeMl();
             }
         }
-        return (float) (coposBebidos * volumeCopoMl) / 1000;
+        return mlBebidos;
     }
+    public float totalMl() {
+        float totalMl = 0;
+        for (Copo copo : copos) {
+            totalMl += copo.getVolumeMl();
+        }
+        return totalMl;
+    }
+
 }
